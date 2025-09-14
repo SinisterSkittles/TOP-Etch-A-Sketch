@@ -1,0 +1,11 @@
+#grid {
+    max-width: fit-content;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div {
+    min-width: 10px;
+    min-height: 10px;
+}
