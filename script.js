@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector("#grid");
-
+const button = document.querySelector("button");
+let size = 0;
 
 function generateGrid(gridSize) {
     for(let i = 0; i < gridSize; i++) {
@@ -10,8 +11,14 @@ function generateGrid(gridSize) {
     }
 }
 
+generateGrid(16*16);
+
 const hoverDivs = document.querySelectorAll(".hoverDiv");
 
-//document.createElement("div").setAttribute("style", "border: 2px solid blue;")
-generateGrid(16*16);
+hoverDivs.forEach((div) => {
+    div.addEventListener('mouseover', (event) => {
+       event.target.style.backgroundColor = "orange";
+    });
+});
+
 
